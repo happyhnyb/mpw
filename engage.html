@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Engage — Abundance</title>
+<meta name="description" content="Request a policy dialogue, explore a partnership or enquire about the book Abundance.">
+<meta property="og:title" content="Engage — Abundance">
+<meta property="og:description" content="Request a policy dialogue, explore a partnership or enquire about the book Abundance.">
+<meta property="og:image" content="assets/img/kapunga-canal.jpg">
+<meta name="theme-color" content="#3E6B34">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800&f[]=satoshi@400,500,700&f[]=zodiak@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#3E6B34"/><path d="M16 25V11M16 15c-3-1-5-3.5-5-6 3 .5 5 3 5 6zm0 4c3-1 5-3.5 5-6-3 .5-5 3-5 6z" stroke="#EAF3E0" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Abundance</b></a>
+    <nav class="nav" aria-label="Main"><a href="the-book.html">The Book</a><a href="the-vision.html">The Vision</a><a href="kapunga.html">Kapunga in Action</a><a href="mahesh-patel.html">Mahesh Patel</a><a class="btn" href="engage.html" aria-current="page">Engage</a></nav>
+    <details class="menu">
+      <summary>Menu</summary>
+      <nav aria-label="Main"><a href="the-book.html">The Book</a><a href="the-vision.html">The Vision</a><a href="kapunga.html">Kapunga in Action</a><a href="mahesh-patel.html">Mahesh Patel</a><a href="engage.html" aria-current="page">Engage</a></nav>
+    </details>
+  </div>
+</header>
+<main>
+<section class="phead">
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a> / Engage</p>
+    <div class="phead-grid">
+      <h1>From shared understanding to shared action</h1>
+      <p class="lede">Three routes for governments, agribusinesses, investors, development institutions and readers. Each request goes to the team best placed to respond.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split top">
+    <div>
+      <h2>Tell us what you have in mind</h2>
+      <p class="muted" style="margin-top:1rem">A short note is enough. Please include your organisation and country so we can route the request.</p>
+      <ul class="list-rows" style="margin-top:2rem">
+        <li><h3>Policy dialogue</h3><p>Policy briefings, institutional discussions and exchanges on farmer-centric agricultural development.</p></li>
+        <li><h3>Partnerships</h3><p>Value chains, finance, technology adoption, processing and replicable project models.</p></li>
+        <li><h3>The book</h3><p>Book availability, approved extracts, event participation and interviews.</p></li>
+      </ul>
+    </div>
+    <form class="form" id="form" novalidate>
+      <fieldset class="choice">
+        <legend>What is your request about?</legend>
+        <label><input type="radio" name="route" value="policy" required><b>Policy dialogue</b><span>Government and institutions</span></label>
+        <label><input type="radio" name="route" value="partnership"><b>Partnership</b><span>Business and finance</span></label>
+        <label><input type="radio" name="route" value="book"><b>The book</b><span>Copies, extracts, events</span></label>
+      </fieldset>
+      <div class="field"><label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="f-org">Organisation</label><input id="f-org" name="organisation" autocomplete="organization" required></div>
+      <div class="field"><label for="f-pos">Position</label><input id="f-pos" name="position" autocomplete="organization-title"></div>
+      <div class="field"><label for="f-country">Country</label><input id="f-country" name="country" autocomplete="country-name" required></div>
+      <div class="field"><label for="f-area">Area of interest</label>
+        <select id="f-area" name="area">
+          <option value="">Choose one</option>
+          <option>Irrigation and infrastructure</option>
+          <option>Smallholder finance</option>
+          <option>Outgrower and value-chain models</option>
+          <option>Processing and value addition</option>
+          <option>Agricultural policy and institutions</option>
+          <option>Youth and women in agriculture</option>
+          <option>The book and its ideas</option>
+        </select>
+      </div>
+      <div class="field full"><label for="f-msg">Message</label><span class="hint" id="f-msg-hint">A few sentences on what you would like to discuss.</span><textarea id="f-msg" name="message" aria-describedby="f-msg-hint" required></textarea></div>
+      <div class="field full"><button class="btn" type="submit" style="justify-self:start">Send the request</button></div>
+      <div class="form-status notice" role="status" hidden></div>
+    </form>
+  </div>
+</section>
+
+<section class="section leaf" id="briefs">
+  <div class="wrap">
+    <div class="head"><div><span class="label">Knowledge and policy briefs</span><h2>Evidence for decision-makers</h2></div><p>Readable, evidence-based papers, released as each is approved.</p></div>
+    <ul class="briefs">
+      <li><h3>Abundance: executive brief</h3><p>The book's key arguments and implications in three to four pages.</p><span class="status">In preparation</span></li>
+      <li><h3>The Kapunga model: executive case study</h3><p>The journey, mechanisms and outcomes, with sourced figures.</p><span class="status">In preparation</span></li>
+      <li><h3>Farmer-centric agriculture: strategic framework</h3><p>The integrated ecosystem and each stakeholder's role.</p><span class="status">In preparation</span></li>
+      <li><h3>Vision 2050: policy discussion paper</h3><p>Priority policy and institutional shifts for smallholder-led prosperity.</p><span class="status">In preparation</span></li>
+      <li><h3>Partnership brief</h3><p>Where governments, businesses, lenders and development partners can collaborate.</p><span class="status">In preparation</span></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#3E6B34"/><path d="M16 25V11M16 15c-3-1-5-3.5-5-6 3 .5 5 3 5 6zm0 4c3-1 5-3.5 5-6-3 .5-5 3-5 6z" stroke="#EAF3E0" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Abundance</b></a>
+        <p class="muted" style="margin-top:.9rem;max-width:26rem">The home of <i>Abundance: Growing Africa into a Middle-Income Economy</i> by Mahesh Patel, as narrated to Prof. Arun Tiwari and Dr Charity Mutegi.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul><li><a href="the-book.html">The Book</a></li><li><a href="the-vision.html">The Vision</a></li><li><a href="kapunga.html">Kapunga in Action</a></li><li><a href="the-model.html">The Farmer-Centric Model</a></li><li><a href="mahesh-patel.html">Mahesh Patel</a></li></ul>
+      </div>
+      <div>
+        <h4>Engage</h4>
+        <ul><li><a href="engage.html?route=policy#form">Policy dialogue</a></li><li><a href="engage.html?route=partnership#form">Partnerships</a></li><li><a href="engage.html?route=book#form">Book enquiries</a></li><li><a href="engage.html#briefs">Policy briefs</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-note"><span>&copy; 2026 Abundance Africa</span><span>abundanceafrica.com</span></div>
+  </div>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
