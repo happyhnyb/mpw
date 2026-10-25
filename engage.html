@@ -18,10 +18,10 @@
 <header class="site-header">
   <div class="bar">
     <a class="brand" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#3E6B34"/><path d="M16 25V11M16 15c-3-1-5-3.5-5-6 3 .5 5 3 5 6zm0 4c3-1 5-3.5 5-6-3 .5-5 3-5 6z" stroke="#EAF3E0" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Abundance</b></a>
-    <nav class="nav" aria-label="Main"><a href="the-book.html">The Book</a><a href="the-vision.html">The Vision</a><a href="kapunga.html">Kapunga in Action</a><a href="mahesh-patel.html">Mahesh Patel</a><a class="btn" href="engage.html" aria-current="page">Engage</a></nav>
+    <nav class="nav" aria-label="Main"><a href="mahesh-patel.html">His Story</a><a href="kapunga.html">Kapunga</a><a href="beyond-kapunga.html">Beyond Kapunga</a><a href="the-model.html">The Model</a><a href="the-vision.html">Vision 2050</a><a href="the-book.html">The Book</a><a class="btn" href="request-copy.html">Request a copy</a></nav>
     <details class="menu">
       <summary>Menu</summary>
-      <nav aria-label="Main"><a href="the-book.html">The Book</a><a href="the-vision.html">The Vision</a><a href="kapunga.html">Kapunga in Action</a><a href="mahesh-patel.html">Mahesh Patel</a><a href="engage.html" aria-current="page">Engage</a></nav>
+      <nav aria-label="Main"><a href="mahesh-patel.html">His Story</a><a href="kapunga.html">Kapunga</a><a href="beyond-kapunga.html">Beyond Kapunga</a><a href="the-model.html">The Model</a><a href="the-vision.html">Vision 2050</a><a href="the-book.html">The Book</a><a href="request-copy.html">Request a copy</a><a href="engage.html" aria-current="page">Engage</a></nav>
     </details>
   </div>
 </header>
@@ -31,7 +31,7 @@
     <p class="crumbs"><a href="index.html">Home</a> / Engage</p>
     <div class="phead-grid">
       <h1>From shared understanding to shared action</h1>
-      <p class="lede">Three routes for governments, agribusinesses, investors, development institutions and readers. Each request goes to the team best placed to respond.</p>
+      <p class="lede">For governments, agribusinesses, investors and development institutions who want to take the ideas in Abundance further. Each request goes to the team best placed to respond.</p>
     </div>
   </div>
 </section>
@@ -44,15 +44,17 @@
       <ul class="list-rows" style="margin-top:2rem">
         <li><h3>Policy dialogue</h3><p>Policy briefings, institutional discussions and exchanges on farmer-centric agricultural development.</p></li>
         <li><h3>Partnerships</h3><p>Value chains, finance, technology adoption, processing and replicable project models.</p></li>
-        <li><h3>The book</h3><p>Book availability, approved extracts, event participation and interviews.</p></li>
+        <li><h3>The book</h3><p>Want a copy of Abundance? <a href="request-copy.html">Request one here</a>. For extracts, events and interviews, choose “Policy dialogue” or “Partnership” and say so in your message.</p></li>
       </ul>
     </div>
-    <form class="form" id="form" novalidate>
-      <fieldset class="choice">
+    <form class="form" id="form" data-form="engage" novalidate>
+      <input type="hidden" name="_subject" value="Engage request: Abundance">
+      <input type="hidden" name="form" value="Engage">
+      <div class="field full" hidden><label for="f-gotcha">Leave this empty</label><input id="f-gotcha" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+      <fieldset class="choice choice--2">
         <legend>What is your request about?</legend>
         <label><input type="radio" name="route" value="policy" required><b>Policy dialogue</b><span>Government and institutions</span></label>
         <label><input type="radio" name="route" value="partnership"><b>Partnership</b><span>Business and finance</span></label>
-        <label><input type="radio" name="route" value="book"><b>The book</b><span>Copies, extracts, events</span></label>
       </fieldset>
       <div class="field"><label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name" required></div>
       <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
@@ -73,7 +75,7 @@
       </div>
       <div class="field full"><label for="f-msg">Message</label><span class="hint" id="f-msg-hint">A few sentences on what you would like to discuss.</span><textarea id="f-msg" name="message" aria-describedby="f-msg-hint" required></textarea></div>
       <div class="field full"><button class="btn" type="submit" style="justify-self:start">Send the request</button></div>
-      <div class="form-status notice" role="status" hidden></div>
+      <div class="form-status notice field full" role="status" aria-live="polite" hidden></div>
     </form>
   </div>
 </section>
@@ -97,15 +99,15 @@
     <div class="foot-grid">
       <div>
         <a class="brand" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#3E6B34"/><path d="M16 25V11M16 15c-3-1-5-3.5-5-6 3 .5 5 3 5 6zm0 4c3-1 5-3.5 5-6-3 .5-5 3-5 6z" stroke="#EAF3E0" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Abundance</b></a>
-        <p class="muted" style="margin-top:.9rem;max-width:26rem">The home of <i>Abundance: Growing Africa into a Middle-Income Economy</i> by Mahesh Patel, as narrated to Prof. Arun Tiwari and Dr Charity Mutegi.</p>
+        <p class="muted" style="margin-top:.9rem;max-width:26rem">The story of Mahesh Patel and Africa's smallholder farmers, told in <i>Abundance: Growing Africa into a Middle-Income Economy</i>, as narrated to Prof. Arun Tiwari and Dr Charity Mutegi.</p>
       </div>
       <div>
-        <h4>Explore</h4>
-        <ul><li><a href="the-book.html">The Book</a></li><li><a href="the-vision.html">The Vision</a></li><li><a href="kapunga.html">Kapunga in Action</a></li><li><a href="the-model.html">The Farmer-Centric Model</a></li><li><a href="mahesh-patel.html">Mahesh Patel</a></li></ul>
+        <h4>The story</h4>
+        <ul><li><a href="index.html">Prologue: That evening</a></li><li><a href="mahesh-patel.html">1. Born in Africa</a></li><li><a href="kapunga.html">2. Kapunga</a></li><li><a href="beyond-kapunga.html">3. Beyond Kapunga</a></li><li><a href="the-model.html">4. What Kapunga taught</a></li><li><a href="the-vision.html">5. Vision 2050</a></li><li><a href="the-book.html">Epilogue: The book</a></li></ul>
       </div>
       <div>
-        <h4>Engage</h4>
-        <ul><li><a href="engage.html?route=policy#form">Policy dialogue</a></li><li><a href="engage.html?route=partnership#form">Partnerships</a></li><li><a href="engage.html?route=book#form">Book enquiries</a></li><li><a href="engage.html#briefs">Policy briefs</a></li></ul>
+        <h4>Get involved</h4>
+        <ul><li><a href="request-copy.html">Request a copy</a></li><li><a href="engage.html?route=policy#form">Policy dialogue</a></li><li><a href="engage.html?route=partnership#form">Partnerships</a></li><li><a href="engage.html#briefs">Policy briefs</a></li></ul>
       </div>
     </div>
     <div class="foot-note"><span>&copy; 2026 Abundance Africa</span><span>abundanceafrica.com</span></div>

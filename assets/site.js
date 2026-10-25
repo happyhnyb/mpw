@@ -169,23 +169,40 @@
     steps.forEach((s) => io.observe(s));
   });
 
-  /* Engage form: preselect the route from ?route=, validate, report status */
-  const form = document.getElementById("form");
-  if (form) {
-    const route = new URLSearchParams(location.search).get("route");
+  /* Forms: validate, then send to Formspree. Paste the form ID from formspree.io (e.g. "xyzabcd") here. */
+  const FORMSPREE_ID = "";
+  const route = new URLSearchParams(location.search).get("route");
+  $$("form[data-form]").forEach((form) => {
     const radio = route && form.querySelector(`input[name="route"][value="${CSS.escape(route)}"]`);
     if (radio) radio.checked = true;
     const status = form.querySelector(".form-status");
-    form.addEventListener("submit", (e) => {
+    const button = form.querySelector("button[type=submit]");
+    const say = (html) => { status.hidden = false; status.innerHTML = html; };
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
-      status.hidden = false;
       if (!form.checkValidity()) {
-        status.innerHTML = "<p><b>A few details are missing.</b> Please choose a route and fill in your name, email, organisation, country and message.</p>";
+        const name = (el) => (el.type === "radio" ? el.closest("fieldset")?.querySelector("legend") : el.labels?.[0]?.childNodes[0])?.textContent.trim();
+        const missing = [...new Set($$(":invalid", form).map(name).filter(Boolean))];
+        say(`<p><b>A few details need attention:</b> ${missing.join(", ")}.</p>`);
         form.querySelector(":invalid")?.focus();
         return;
       }
-      // TODO: connect to the form endpoint (e.g. Formspree, Netlify Forms or a CRM) and route by `route`
-      status.innerHTML = "<p><b>The form is not connected yet.</b> [TODO: form endpoint] Your message has not been sent.</p>";
+      if (!FORMSPREE_ID) {
+        say("<p><b>The form is not connected yet.</b> Your request has not been sent. Please try again later.</p>");
+        return;
+      }
+      button.disabled = true;
+      say("<p>Sending…</p>");
+      try {
+        const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
+        if (!res.ok) throw new Error(String(res.status));
+        form.reset();
+        say(`<p><b>Thank you. Your request has been sent.</b> ${form.dataset.thanks || "The team will be in touch soon."}</p>`);
+      } catch {
+        say("<p><b>Your request could not be sent.</b> Please check your connection and try again.</p>");
+      } finally {
+        button.disabled = false;
+      }
     });
-  }
+  });
 })();
