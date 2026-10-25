@@ -46,7 +46,9 @@
     <form class="form" id="copy-form" data-form="book-request" novalidate>
       <input type="hidden" name="_subject" value="Book request: Abundance">
       <input type="hidden" name="form" value="Request a copy">
-      <div class="field full" hidden><label for="c-gotcha">Leave this empty</label><input id="c-gotcha" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <div class="field full" hidden><label for="c-honey">Leave this empty</label><input id="c-honey" name="_honey" tabindex="-1" autocomplete="off"></div>
       <div class="field full"><label for="c-name">Full name <span class="req" aria-hidden="true">*</span></label><input id="c-name" name="name" autocomplete="name" required></div>
       <div class="field"><label for="c-phone">Phone number <span class="req" aria-hidden="true">*</span></label><span class="hint" id="c-phone-hint">Include your country code, e.g. +255 …</span><input id="c-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9 +\-\(\)]{7,}" aria-describedby="c-phone-hint" required></div>
       <div class="field"><label for="c-email">Email <span class="muted" style="font-weight:500">(optional)</span></label><span class="hint" id="c-email-hint">So we can reply in writing.</span><input id="c-email" name="email" type="email" autocomplete="email" aria-describedby="c-email-hint"></div>

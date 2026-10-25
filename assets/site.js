@@ -169,8 +169,8 @@
     steps.forEach((s) => io.observe(s));
   });
 
-  /* Forms: validate, then send to Formspree. Paste the form ID from formspree.io (e.g. "xyzabcd") here. */
-  const FORMSPREE_ID = "";
+  /* Forms: validate, then email the submission to the inbox below via FormSubmit (formsubmit.co). */
+  const FORM_INBOX = "info@hnyb.in";
   const route = new URLSearchParams(location.search).get("route");
   $$("form[data-form]").forEach((form) => {
     const radio = route && form.querySelector(`input[name="route"][value="${CSS.escape(route)}"]`);
@@ -187,15 +187,12 @@
         form.querySelector(":invalid")?.focus();
         return;
       }
-      if (!FORMSPREE_ID) {
-        say("<p><b>The form is not connected yet.</b> Your request has not been sent. Please try again later.</p>");
-        return;
-      }
       button.disabled = true;
       say("<p>Sending…</p>");
       try {
-        const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
-        if (!res.ok) throw new Error(String(res.status));
+        const res = await fetch(`https://formsubmit.co/ajax/${FORM_INBOX}`, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
+        const out = await res.json().catch(() => ({}));
+        if (!res.ok || String(out.success) === "false") throw new Error(out.message || String(res.status));
         form.reset();
         say(`<p><b>Thank you. Your request has been sent.</b> ${form.dataset.thanks || "The team will be in touch soon."}</p>`);
       } catch {
