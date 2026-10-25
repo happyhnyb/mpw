@@ -609,3 +609,4 @@ figcaption { font-size: var(--fs-small); color: var(--ink-2); margin-top: .7rem;
 .shift-q cite { display: block; margin-top: .55rem; font-style: normal; font-size: .8rem; font-weight: 700; color: var(--soil); }
 .briefs a.status { text-decoration: none; background: var(--green); color: #fff; }
 .briefs a.status:hover { background: var(--green-hover); color: #fff; }
+.cta-band { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.25rem 2rem; margin-top: 2rem; padding: clamp(1.25rem, 3vw, 2rem); background: #fff; border: 1px solid var(--rule); border-radius: var(--radius-l); }
